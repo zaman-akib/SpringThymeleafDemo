@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head >
+    <title id="pageTitle">Registration on progress</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic tiny segment"></div>
+
+    <div class="ui left aligned container" style="padding-left: 43px;">
+        <div class="ui large breadcrumb">
+            <a class="section" th:href="@{/student-id/student-dashboard}">Home</a>
+            <i class="right chevron icon divider"></i>
+            <span class="section ui blue text">Registration</span>
+            <i class="right arrow icon divider"></i>
+            <div class="active section">Daoray Hadith Exam 2022</div>
+        </div>
+    </div>
+
+    <div class="ui centered raised card" style="width:85%; margin-bottom: 40px;">
+        <div class="m-t-40"></div>
+        <div class="ui container">
+            <div class="ui big header">নতুন পরীক্ষার্থী নিবন্ধন</div>
+        </div>
+
+        <div class="ui left aligned container" style="margin-left: 50px; margin-top: 30px;">
+            <table class="ui very basic collapsing table">
+                <thead>
+                    <tr>
+                        <span class="ui large text">বিগত পরীক্ষার তথ্য</span>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">পরীক্ষার নাম: </span></td>
+                        <td><span class="ui large text">ফজিলত</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">পরীক্ষার্থী নাম: </span></td>
+                        <td><span class="ui large text">আয়েশা বেগম</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">লিঙ্গ: </span></td>
+                        <td><span class="ui large text">মহিলা</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">পিতার নাম: </span></td>
+                        <td><span class="ui large text">মুহাম্মদ আবুল হায়াৎ</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">রোল নাম্বার: </span></td>
+                        <td><span class="ui large text">৮৭৫৬৫৪৩</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">পাশের সন (হিজরী): </span></td>
+                        <td><span class="ui large text">১৪৪২</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">প্রার্প্ত বিভাগ: </span></td>
+                        <td><span class="ui large text">মুমতাজ</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ui large grey text" style="padding-right: 5rem;">মাদ্রাসা: </span></td>
+                        <td><span class="ui large text">আয়েশা সিদ্দিকী রঃ, ৫ দক্ষিণ বাড্ডা, ঢাকা</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ui left aligned container" style="margin-left: 50px; margin-top: 30px;">
+            <table class="ui very basic collapsing table">
+                <thead>
+                <tr>
+                    <span class="ui large text">আবেদনের ধরণ</span>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="ui large grey text" style="padding-right: 4rem;">পরীক্ষার নাম: </span></td>
+                    <td><span class="ui large text">দাওরায়ে হাদীস</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ui large grey text" style="padding-right: 4rem;">পরীক্ষার্থী ধরণ: </span></td>
+                    <td><span class="ui large text">নিয়মিত</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ui large grey text" style="padding-right: 4rem;">পরীক্ষার সন (হিজরী): </span></td>
+                    <td><span class="ui large text">১৪৪৪</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <form class="ui left aligned equal width form" style="margin: 20px 50px 0px 50px;" th:action="@{/student-id/student-dashboard}">
+            <div class="ui divider" style="margin-top: 20px;"></div>
+
+            <div class="ui left aligned container" style="margin-top: 40px; margin-bottom: 20px;">
+                <span class="ui large text">আবেদনের ধরণ</span>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">আবেদনকারীর পূর্ণাঙ্গ নাম (ইংরেজিতে)</span></label>
+                    <input type="text" id="name_eng">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">আবেদনকারীর পূর্ণাঙ্গ নাম (বাংলায়)</span></label>
+                    <input type="text" id="name_bangla">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">আবেদনকারীর পূর্ণাঙ্গ নাম (আরবীতে)</span></label>
+                    <input type="text" id="name_arabic">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">পিতার পূর্ণাঙ্গ নাম (ইংরেজিতে)</span></label>
+                    <input type="text" id="father_name_eng">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">পিতার পূর্ণাঙ্গ নাম (বাংলায়)</span></label>
+                    <input type="text" id="father_name_bangla">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">পিতার পূর্ণাঙ্গ নাম (আরবীতে)</span></label>
+                    <input type="text" id="father_name_arabic">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">মাতার  পূর্ণাঙ্গ নাম (ইংরেজিতে)</span></label>
+                    <input type="text" id="mother_name_eng">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">মাতার  পূর্ণাঙ্গ নাম (বাংলায়)</span></label>
+                    <input type="text" id="mother_name_bangla">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">মাতার  পূর্ণাঙ্গ নাম (আরবীতে)</span></label>
+                    <input type="text" id="mother_name_arabic">
+                </div>
+            </div>
+
+            <div class="ui divider" style="margin: 40px 0px 30px 0px;"></div>
+
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">গ্রাম/মহল্লা</span></label>
+                    <input type="text" id="village">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">ডাকঘর</span></label>
+                    <input type="text" id="post_office">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">থানা </span></label>
+                    <input type="text" id="thana">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">জেলা</span></label>
+                    <input type="text" id="zilla">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">পরিচয়পত্রের নম্বর </span></label>
+                    <input type="text" id="nid">
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label><span class="ui grey text">জন্ম তারিখ</span></label>
+                    <input type="text" id="birth_date">
+                </div>
+                <div class="field">
+                    <label><span class="ui grey text">মোবাইল নম্বর</span></label>
+                    <input type="text" id="mobile">
+                </div>
+            </div>
+
+            <div class="ui divider" style="margin: 40px 0px 40px 0px;"></div>
+
+            <a class="ui container center aligned">
+                <button class="ui grey button" style="width: 300px;" type="submit">
+                    Continue
+                </button>
+            </a>
+
+        </form>
+
+        <div class="ui basic tiny segment"></div>
+    </div>
+</div>
+
+</body>
+</html>

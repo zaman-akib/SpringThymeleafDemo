@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">AHU Registration</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic large segment"></div>
+
+    <div class="ui centered raised card large" style="width: 680px;">
+        <div class="ui basic tiny segment"></div>
+
+        <div class="ui container" style="margin-top: 20px;">
+            <h1 class="ui large header">আল হায়াতুল-উইলা এর অন্তর্গযুক্ত <br> শিক্ষার্থী হলে</h1>
+        </div>
+
+        <div class="ui basic tiny segment" style="padding-bottom: 25px; padding-top: 20px;">
+            <span class="ui big text">নিচের তথ্য গুলো প্রদান করুন</span>
+        </div>
+
+        <form class="ui equal width form" th:action="@{/account-verification}">
+            <div class="fields" style="margin: 0px 50px 0px 50px;">
+                <div class="field" style="margin-right: 10px;">
+                    <label class="left aligned">মোবাইল নম্বর</label>
+                    <input type="text" id="mobile" placeholder="xxxxxxxxxxx">
+                </div>
+                <div class="field">
+                    <label class="left aligned">শেষ যে পরীক্ষায় অংশগ্রহণ করেছেন </label>
+                    <select class="ui dropdown" id="last_exam">
+                        <option value="">নির্বাচন করুন</option>
+                        <option value="fazilat">ফজীলত</option>
+                        <option value="dawrah_e_hadith">দাওরায়ে হাদীস</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fields" style="margin: 8px 50px 8px 50px;">
+                <div class="field" style="margin-right: 10px;">
+                    <label class="left aligned">শেষ পরীক্ষায় পাশের বছর</label>
+                    <select class="ui dropdown" id="exam_year">
+                        <option value="">নির্বাচন করুন</option>
+                        <option value="2021">২০২১</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="left aligned">যে বোর্ডের মাধ্যমে পরীক্ষা দেয়াছিলেন</label>
+                    <select class="ui dropdown" id="board">
+                        <option value="">নির্বাচন করুন</option>
+                        <option value="dhaka">ঢাকা</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fields" style="margin: 0px 50px 0px 50px;">
+                <div class="field" style="margin-right: 10px;">
+                    <label class="left aligned">পরীক্ষার নিবন্ধনী নম্বর যা ছিলো</label>
+                    <input type="text" id="reg_number" placeholder="xxxxxxxxx">
+                </div>
+                <div class="field">
+                    <label class="left aligned">পরীক্ষার রোল নম্বর যা ছিলো</label>
+                    <input type="text" id="roll_number" placeholder="xxxxxxxxx">
+                </div>
+            </div>
+
+            <div class="ui basic segment" style="margin: 30px 45px 30px 45px;">
+                <a class="ui left floated button" th:href="@{/student-sign-in}">
+                    পূর্বে ফিরে যাই
+                </a>
+                <a>
+                    <button class="ui disabled right floated button" type="submit">
+                        পরবর্তী <i class="angle right icon"></i>
+                    </button>
+                </a>
+            </div>
+        </form>
+
+        <div class="ui basic segment"></div>
+    </div>
+
+    <div class="ui basic tiny segment">
+        <span class="ui big text">আল হায়াতুল-উইলা এর অন্তর্গযুক্ত নয়, এমন শিক্ষার্থীদের জন্য - </span>
+    </div>
+    <div class="ui basic tiny segment">
+        <span class="ui large text">আপনি যদি আল হায়াতুল-উইলা ব্যাতিত অন্য কোনো প্রতিষ্ঠান থেকে দাওরায় হাদীস পরীক্ষায় পাশ করে <br>
+            থাকেন এবং এখন আল হায়াতুল-উইলা এর মাধ্যমে আরেকবার দাওরায়ে হাদীস পরীক্ষাদানের জন্য <br>
+            অন্তর্ভুক্তি করতে চান তাহলে
+            <a class="ui blue tiny header" th:href="@{/student-registration-non-ahu}">এখানে চাপুন</a>
+        </span>
+    </div>
+</div>
+
+</body>
+</html>

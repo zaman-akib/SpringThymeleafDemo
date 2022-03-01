@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Account Verification</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic huge segment"></div>
+    <div class="ui centered raised card" style="width: 720px;">
+        <div class="ui basic huge segment"></div>
+
+        <div class="ui container">
+            <h1 class="ui huge header">Account Verification</h1>
+        </div>
+
+        <div class="ui left aligned container" style="margin: 40px 70px 20px 70px;">
+            <span class="ui large text">Please enter the OTP Code ypu received. <br></span>
+            <div style="margin-top: 5px;">
+                <span class="ui medium text">The OTP code that was sent to you is valid for 5 minutes. It might take a few <br></span>
+                <span class="ui medium text">
+                    seconds to receive the Code. If you don't receive any code,
+                    <a>
+                        <u>Click here to re-send a new code</u>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <form class="ui left aligned form" th:action="@{/set-password}">
+            <div class="field" style="margin: 10px 380px 10px 70px;">
+                <label>Mobile Number</label>
+                <input type="text" id="mobile" placeholder="xxxxxxxxxxx">
+            </div>
+            <div class="field" style="margin: 0px 380px 30px 70px;">
+                <label>OTP Code</label>
+                <input type="text" id="otp" placeholder="xxxxx">
+            </div>
+
+            <div class="ui basic left aligned container">
+                <a style="margin-left: 70px;">
+                    <button class="ui green button" type="submit">
+                        Continue
+                    </button>
+                </a>
+            </div>
+        </form>
+
+        <div class="ui basic huge segment"></div>
+    </div>
+</div>
+
+</body>
+</html>

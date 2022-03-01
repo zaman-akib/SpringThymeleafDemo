@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Header</title>
+</head>
+<body>
+
+<nav th:fragment="navbar">
+    <div class="ui teal inverted secondary menu" style="padding: 5px;">
+        <div class="ui teal inverted left menu">
+            <a th:href="@{/}" class="ui item" style="margin-left: 20px;">
+                <img class="ui tiny image" th:src="@{/images/qemsLogo.png}">
+            </a>
+        </div>
+        <div th:if="false" class="right menu">
+            <div class="ui item">
+                <div class="ui right aligned container">
+                    <div>
+                        <span class="ui large black text">Ayesha Begum</span>
+                    </div>
+                    <div class="m-t-5">
+                        <span class="ui black text">Student</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui item">
+                <div class="column">
+                    <div class="badge">AB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

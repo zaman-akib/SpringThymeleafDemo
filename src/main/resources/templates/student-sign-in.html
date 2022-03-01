@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Sign In</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic massive segment"></div>
+    <div class="ui basic segment"></div>
+    <div class="ui centered raised card" style="width: 480px;">
+        <div class="ui basic tiny segment"></div>
+
+        <div class="ui basic tiny segment">
+            <h2>একাউন্টধারী শিক্ষার্থীর সাইন ইন</h2>
+        </div>
+
+        <div class="ui basic tiny left aligned segment" style="margin-left: 55px;">
+            <span class="ui large text">আপনার মোবাইল নম্বর এবং পাসওয়ার্ড দিন</span>
+        </div>
+
+        <form class="ui left aligned form" th:action="@{/student-id/student-dashboard}">
+            <div class="field" style="margin: 10px 180px 10px 65px;">
+                <label>মোবাইল নম্বর </label>
+                <input type="text" id="mobile" placeholder="xxxxxxxxxxx">
+            </div>
+            <div class="field" style="margin: 0px 180px 20px 65px;">
+                <label>পাসওয়ার্ড </label>
+                <input type="password" id="password" placeholder="***********">
+            </div>
+
+            <div class="ui basic tiny segment" style="margin-left: 50px; margin-right: 50px;">
+                <a class="ui left floated button" th:href="@{/registration-ongoing}">
+                    পূর্বে ফিরে যাই
+                </a>
+                <a>
+                    <button class="ui green right floated button" type="submit">
+                        পরবর্তী <i class="angle right icon"></i>
+                    </button>
+                </a>
+            </div>
+        </form>
+
+        <div class="ui basic segment"></div>
+    </div>
+
+    <div class="ui basic tiny segment">
+        <span class="ui large text">একাউন্ট নেই ?</span>
+    </div>
+    <a class="ui basic tiny segment" th:href="@{/student-registration-ahu}">
+        <span class="ui large text">নতুন একাউন্ট তৈরী করতে এখানে চাপুন</span>
+    </a>
+</div>
+
+</body>
+</html>

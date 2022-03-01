@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Existing Account</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic massive segment"></div>
+    <div class="ui basic massive segment"></div>
+    <div class="ui centered raised card" style="width: 750px;">
+        <div class="ui basic huge segment"></div>
+
+        <div class="ui container">
+            <h1 class="ui huge header">Check eligibility</h1>
+        </div>
+
+        <div class="ui segment" style="margin: 40px 60px 40px 60px; padding: 10px">
+            <div class="ui two column grid">
+                <div class="two wide column">
+                    <i class="huge red times circle icon"></i>
+                </div>
+                <div class="fourteen wide left aligned column" >
+                    <div>
+                        <span class="ui large text">
+                            Looks like you already have an account with AHU. Please sign in to that account.
+                        </span>
+                    </div>
+                    <div style="margin-top: 5px;">
+                        <span>
+                            In case you have forgotten your login credentials, please contact your madrasah.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="ui container" th:href="@{/student-sign-in}" style="margin-bottom: 50px;">
+            <span class="ui large text">Sign In</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Invalid Information</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic massive segment"></div>
+    <div class="ui centered raised card" style="width: 760px;">
+        <div class="ui basic huge segment"></div>
+
+        <div class="ui container">
+            <h1 class="ui huge header">Check eligibility</h1>
+        </div>
+
+        <div class="ui segment" style="margin: 40px 60px 40px 60px; padding: 10px">
+            <div class="ui center aligned container">
+                <i class="huge red times circle icon"></i>
+                <span class="ui large text">
+                    Fazilat information was not found!
+                </span>
+            </div>
+        </div>
+
+        <div class="ui left aligned container" style="padding-left: 60px; padding-right: 50px;">
+            <span class="ui large text">
+                It looks like we don’t have any record against the information you have provided!
+            </span>
+            <div style="margin-top: 5px;">
+                <span>
+                    You can retry with valid information. Or if you are sure that information are correct, then please contact
+                    your madrasah to resolve this issue.
+                </span>
+            </div>
+        </div>
+
+        <div class="ui basic center aligned tiny segment">
+            <a class="ui button" th:href="@{/}" style="margin-right: 8px;">
+                Cancel
+            </a>
+            <a th:href="@{/student-registration}">
+                <button class="ui green button" type="button">
+                    Retry with Valid information
+                </button>
+            </a>
+        </div>
+
+        <div class="ui basic segment"></div>
+    </div>
+</div>
+
+</body>
+</html>

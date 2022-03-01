@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Header</title>
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <div class="ui inverted menu">
+        <a class="active item" th:href="@{/home}">
+            <span class="ui large text">Home</span>
+        </a>
+        <a class="item" th:href="@{/about}">
+            <span class="ui large text">About</span>
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+            <div class="item">
+                <select name="language" class="ui dropdown" id="language">
+                    <option value="">Language</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="bangla">Bangla</option>
+                    <option value="english">English</option>
+                </select>
+            </div>
+            <a class="item" th:href="@{/home}">
+                <div class="ui teal large button">Sign Up</div>
+            </a>
+        </div>
+    </div>
+    <div></div>
+</nav>
+
+</body>
+</html>

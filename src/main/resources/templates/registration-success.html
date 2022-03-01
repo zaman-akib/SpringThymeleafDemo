@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Registration Success</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic massive segment"></div>
+    <div class="ui basic segment"></div>
+    <div class="ui centered raised card" style="width: 750px;">
+        <div class="ui basic huge segment"></div>
+
+        <div class="ui container">
+            <h1 class="ui huge header">Success!</h1>
+        </div>
+
+        <div class="ui segment" style="margin: 40px 60px 40px 60px; padding: 10px">
+            <span class="ui large text">
+                <i class="check circle big olive icon"></i>
+                Your account have been successfully created.
+            </span>
+        </div>
+
+        <div class="ui container">
+            <span class="ui large text">To proceed with your registration, please login to your account.</span>
+        </div>
+
+        <a class="ui container" th:href="@{/student-sign-in}" style="margin: 40px 0px 50px 0px;">
+            <span class="ui large text">Student Sign In</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

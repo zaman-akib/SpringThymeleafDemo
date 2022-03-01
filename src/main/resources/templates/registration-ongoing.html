@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title id="pageTitle">Registration Ongoing</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+    <div class="ui basic segment"></div>
+    <div class="ui basic segment"></div>
+    <div class="ui basic centered container">
+        <h3 class="ui brown large header">
+            দাওরায়ে হাদীস ১৪৪৩ পরীক্ষার নিবন্ধনী
+        </h3>
+    </div>
+
+    <div class="ui centered raised card" style="width: 480px;">
+        <div class="ui basic segment"></div>
+        <div class="ui basic container segment">
+            <h1 class="ui massive header">নিবন্ধন চলছে</h1>
+        </div>
+        <div class="ui container">
+            <span class="ui large grey text">নিয়মিত নিবন্ধনীর সময়কাল - <br> </span>
+            <span class="ui grey header">১৫ থেকে ৩০শে জানুয়ারী, ২০২২ পর্যন্ত <br> </span>
+            <span class="ui grey header">নিবন্ধনী ফি - ১০০০ টাকা</span>
+        </div>
+        <a class="ui basic container segment" th:href="@{/student-sign-in}">
+            <button class="ui green large button" type="submit">
+                নিবন্ধন করুন
+            </button>
+        </a>
+        <div class="ui basic segment"></div>
+    </div>
+
+    <div class="ui container">
+        <div class="ui basic tiny segment">
+            <span class="ui grey large text">*  নিয়মিত নিবন্ধনী সময়কালে নিবন্ধন প্রক্রিয়ায় অংশগ্রহণ করতে ব্যার্থ হলে ৩০শে জানুয়ারী থেকে ১০ই ফেব্রুয়ারী <br>
+                এর মধ্যে বিলম্ব ফি ৫০০টাকা দিয়ে নিবন্ধনী করা যাবে ৷ ০ই ফেব্রুয়ারীর এর পর নিবন্ধিন প্রক্রিয়া বন্ধ হয়ে যাবে ।</span>
+        </div>
+        <div class="ui basic tiny segment">
+            <a class="ui container" th:href="@{/student-sign-in}">
+                <span class="ui big text">একাউন্টধারী শিক্ষার্থীর সাইন ইন </span>
+            </a>
+        </div>
+        <div>
+            <a class="ui container" th:href="@{/student-registration-ahu}">
+                <span class="ui large text">নতুন একাউন্ট তৈরী করতে এখানে চাপুন</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
