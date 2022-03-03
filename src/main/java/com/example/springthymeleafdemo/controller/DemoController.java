@@ -70,4 +70,9 @@ public class DemoController {
     public String registrationProgress() {
         return "registration-progress";
     }
+
+    @GetMapping(value = "/admin/dashboard")
+    public String adminDashboard() {
+        return "admin-dashboard";
+    }
 }

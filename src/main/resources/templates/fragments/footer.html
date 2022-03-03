@@ -9,7 +9,7 @@
 <footer class="footer" th:fragment="footer">
     <div class="ui footer basic segment">
         <div class="ui center aligned container">
-            <span class="ui grey medium text">© ২০২২ আল-হাইআতুল উলয়া লিল-জামি‘আতিল কওমিয়া বাংলাদেশ</span>
+            <span class="ui grey medium text" th:text="'© ' + #{copyright.year} + ' ' + #{copyright.message}"></span>
         </div>
     </div>
 </footer>

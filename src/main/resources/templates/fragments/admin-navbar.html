@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Header</title>
+</head>
+<body>
+
+<nav th:fragment="navbar">
+    <div class="ui teal inverted secondary menu" style="padding: 5px;">
+        <div class="left menu" style="margin-left: 5px; margin-right: 2px;">
+            <a class="ui header active item">
+                <span class="ui text">পরীক্ষা</span>
+            </a>
+            <a class="ui header item">
+                পরীক্ষক
+            </a>
+            <a class="ui header item">
+                নিরীক্ষক
+            </a>
+            <a class="ui header item">
+                মাদ্রাসা
+            </a>
+            <a class="ui header item">
+                সেটিংস
+            </a>
+        </div>
+        <div th:if="true" class="right menu">
+            <div class="ui item">
+                <div class="ui right aligned container">
+                    <div>
+                        <span class="ui large text">আবু বকর সিদ্দিকী</span>
+                    </div>
+                    <div class="m-t-5">
+                        <span class="ui text">অ্যাডমিন ওস্তাদ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui item">
+                <div class="column">
+                    <div class="badge">ABS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
