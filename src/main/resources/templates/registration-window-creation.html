@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/admin-layout}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="pageTitle">Registration Window</title>
+</head>
+<body layout:fragment="content">
+<div>
+    <div class="ui basic segment"></div>
+    <div class="ui left aligned container" style="padding-bottom: 10px;">
+        <div class="ui breadcrumb">
+            <a class="section"><span class="ui large text">প্রথম পাতা</span></a>
+            <i class="right arrow icon divider"></i>
+            <div class="active section"><span class="ui large text">দাওরায়ে হাদীস ১৪৪৫</span></div>
+        </div>
+    </div>
+    <div class="ui tiny raised card" style="width: 1000px">
+        <div class="ui hidden section divider left aligned content" style="padding-left: 70px; padding-top: 40px">
+            <span class="ui big text">
+                দাওরায়ে হাদীস ১৪৪৫ এর নিবন্ধনের জন্য কোনো নিবন্ধনী উইন্ডো এখনো খোলা হয়নি
+            </span>
+        </div>
+        <a class="ui basic container left aligned segment" style="padding-left: 70px; padding-bottom: 40px" >
+            <button class="ui green large button" id="reg-button" >
+                নিবন্ধনী শুরু করতে এখানে ক্লিক করুন
+            </button>
+        </a>
+    </div>
+    <div class="ui basic segment"></div>
+    <div class="ui tiny modal" id="reg-modal">
+        <div class="ui large header">দাওরায়ে হাদীস ১৪৪৫ - ছাত্র উইন্ডো নিবন্ধনী কার্যক্রম</div>
+        <div class="ui form" style="padding-top: 50px; padding-bottom: 50px">
+            <div class="two fields" style="padding-left: 80px; padding-right: 80px; padding-bottom: 20px">
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            রেগুলার উইন্ডো শুরু
+                        </span>
+                    </label>
+                    <div class="ui calendar" id="rangestart">
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="শুরু">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            রেগুলার উইন্ডো শেষ
+                        </span>
+                    </label>
+                    <div class="ui calendar" id="rangeend">
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="শেষ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields" style="padding-left: 80px; padding-right: 80px; padding-bottom: 20px">
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            বিলম্বিত উইন্ডো শুরু
+                        </span>
+                    </label>
+                    <div class="ui calendar" id="rangestart2">
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="শুরু">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            বিলম্বিত উইন্ডো শেষ
+                        </span>
+                    </label>
+                    <div class="ui calendar" id="rangeend2">
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="শেষ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields" style="padding-left: 80px; padding-right: 80px">
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            নিবন্ধনী ফি
+                        </span>
+                    </label>
+                    <input type="number" placeholder="placeholder">
+                </div>
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            বিলম্ব ফি
+                        </span>
+                    </label>
+                    <input type="number" placeholder="placeholder">
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui large black deny button">
+                ফিরে যাই
+            </div>
+            <a class="ui large positive button" th:href="@{/registration-summary}">
+                ঠিক আছে
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("reg-button").addEventListener("click", function (){
+        $("#reg-modal").modal('show');
+        $('#rangestart').calendar({
+            type: 'date',
+            endCalendar: $('#rangeend')
+        });
+        $('#rangeend').calendar({
+            type: 'date',
+            startCalendar: $('#rangestart')
+        });
+        $('#rangestart2').calendar({
+            type: 'date',
+            endCalendar: $('#rangeend2')
+        });
+        $('#rangeend2').calendar({
+            type: 'date',
+            startCalendar: $('#rangestart2')
+        });
+    });
+</script>
+</body>
+</html>

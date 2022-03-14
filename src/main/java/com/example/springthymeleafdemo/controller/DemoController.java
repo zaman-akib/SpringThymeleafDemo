@@ -75,4 +75,12 @@ public class DemoController {
     public String adminDashboard() {
         return "admin-dashboard";
     }
+
+    @GetMapping(value = "/registration-window")
+    public String registrationWindow() {
+        return "registration-window-creation";
+    }
+
+    @GetMapping(value = "/registration-summary")
+    public String registrationSummary() { return "registration-summary"; }
 }
