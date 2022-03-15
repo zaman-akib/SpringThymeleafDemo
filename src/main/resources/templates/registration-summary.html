@@ -32,31 +32,91 @@
         </span>
         <div class="ui basic segment"></div>
         <span class="ui big text" style="padding-bottom: 20px";>নিবন্ধনের উপাত্ত</span>
-        <div class="ui form">
-        <div class="two fields">
-            <div class="field right aligned" >
-                <div><span class="ui large text">মোট ছাত্র-ছাত্রী আবেদন করেছে </span></div>
-                <div><span class="ui large text">মোট ছাত্র আবেদন করেছে </span></div>
-                <div><span class="ui large text">মোট ছাত্রী আবেদন করেছে</span></div>
-                <div><span class="ui large text">বোর্ড কর্তৃক অনুমোদন পেয়েছে </span></div>
-                <div><span class="ui large text">নিবন্ধনী সম্পন্নকারী মাদ্রাসার সংখ্যা</span></div>
-            </div>
-            <div class="field left aligned">
-                <div><span class="ui large text"> ৩,৩৫,০০০ </span></div>
-                <div><span class="ui large text"> ২,২০,০০০ </span></div>
-                <div><span class="ui large text"> ১,১৫,০০০ </span></div>
-                <div><span class="ui large text">১,৭৩,৭৬৩ </span></div>
-                <div><span class="ui large text"> ১২৫/৩৪৫  </span></div>
-            </div>
-        </div>
-        </div>
+        <table class="ui table" style="padding-right: 40px; padding-left: 30px; padding-top: 10px">
+            <tbody>
+            <tr class="top aligned">
+                <td class="right aligned collapsing">
+                    <span class="ui large text" style="padding-left: 50px; padding-right: 10px;">মোট ছাত্র-ছাত্রী আবেদন করেছে </span>
+                </td>
+                <td class="collapsing">
+                    <div><span class="ui large text" style="padding-right: 10px; padding-left: 10px"> ৩,৩৫,০০০ </span></div>
+                </td>
+                <td>
+                    <div class="ui small progress" data-percent="100" id="bar1" >
+                        <div class="bottom aligned bar" style="padding-right: 10px; padding-left: 10px"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="top aligned">
+                <td class="right aligned">
+                    <div><span class="ui large text" style="padding-left: 50px; padding-right: 10px;">মোট ছাত্র আবেদন করেছে </span></div>
+                </td>
+                <td>
+                    <div><span class="ui large text" style="padding-right: 10px; padding-left: 10px"> ২,২০,০০০ </span></div>
+                </td>
+                <td>
+                    <div class="ui small progress" data-percent="70" id="bar2" >
+                        <div class="blue bar" style="padding-right: 10px; padding-left: 10px"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="top aligned">
+                <td class="right aligned">
+                    <div><span class="ui large text" style="padding-left: 50px; padding-right: 10px;">মোট ছাত্রী আবেদন করেছে </span></div>
+                </td>
+                <td>
+                    <div><span class="ui large text" style="padding-right: 10px; padding-left: 10px"> ১,১৫,০০০ </span></div>
+                </td>
+                <td>
+                    <div class="ui purple small progress" data-percent="30" id="bar3" >
+                        <div class="bar" style="padding-right: 10px; padding-left: 10px"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="top aligned">
+                <td class="right aligned">
+                    <div><span class="ui large text" style="padding-left: 50px; padding-right: 10px;">বোর্ড কর্তৃক অনুমোদন পেয়েছে  </span></div>
+                </td>
+                <td>
+                    <div><span class="ui large text" style="padding-right: 10px; padding-left: 10px"> ১,৭৩,৭৬৩ </span></div>
+                </td>
+                <td>
+                    <div class="ui teal small progress" data-percent="50" id="bar4" >
+                        <div class="bar" style="padding-right: 10px; padding-left: 10px"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="top aligned">
+                <td class="right aligned">
+                    <div><span class="ui large text" style="padding-right: 10px;">নিবন্ধনী সম্পন্নকারী মাদ্রাসার সংখ্যা</span></div>
+                </td>
+                <td>
+                    <div><span class="ui large text" style="padding-right: 10px; padding-left: 10px"> ১২৫/৩৪৫ </span></div>
+                </td>
+                <td>
+                    <div class="ui brown small progress" data-percent="60" id="bar5"  >
+                        <div class="bar" style="padding-right: 10px; padding-left: 10px"></div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
         <a class="ui centered" style="padding-top: 20px; padding-right: 10px">
             <span class="ui large text">
                 নিবন্ধনের বিস্তারিত দেখুন
             </span>
         </a>
 </div>
-<script>
-</script>
+    <script>
+        $( document ).ready(function() {
+            $('#bar1').progress();
+            $('#bar2').progress();
+            $('#bar3').progress();
+            $('#bar4').progress();
+            $('#bar5').progress();
+        });
+    </script>
 </body>
 </html>
