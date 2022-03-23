@@ -83,4 +83,13 @@ public class DemoController {
 
     @GetMapping(value = "/registration-summary")
     public String registrationSummary() { return "registration-summary"; }
+
+    @GetMapping(value = "/pre-registration")
+    public String preRegistration() { return "pre-registration"; }
+
+    @GetMapping(value = "/registration")
+    public String registration() { return "registration"; }
+
+    @GetMapping(value = "/other-madrasah-registration")
+    public String otherMadrasahRegistration() { return "other-madrasah-registration"; }
 }

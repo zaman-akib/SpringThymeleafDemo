@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/admin-layout}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="pageTitle">Registration Window</title>
+</head>
+<body layout:fragment="content">
+<div style="padding-bottom: 20px">
+    <div class="ui basic segment"></div>
+    <div class="ui left aligned container" style="padding-bottom: 20px; padding-top: 50px">
+        <div style="padding-bottom: 5px">
+            <span class="ui big text"><b>দাওয়ারে হাদীস ১৪৪৫ - ছাত্র নিবন্ধনী</b></span>
+        </div>
+        <span class="ui large text">আল-হায়াতুল উলিয়া হতে পূর্বে কোনো পরীক্ষা দিয়ে থাকলে </span>
+    </div>
+    <div class="ui tiny raised card" style="width: 800px;">
+        <div class="ui form" style="padding-top: 50px; padding-bottom: 50px">
+            <div class="two fields" style="padding-left: 80px; padding-right: 80px; padding-bottom: 20px">
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            শেষ যে পরীক্ষায় অংশগ্রহণ করেছেন
+                        </span>
+                    </label>
+                    <select id="lastExam">
+                        <option value="">ফজিলত</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            শেষ পরীক্ষায় পাশের বছর
+                        </span>
+                    </label>
+                    <select id="lastExamYear">
+                        <option value="">১৪৪৫</option>
+                    </select>
+                </div>
+            </div>
+            <div class="two fields" style="padding-left: 80px; padding-right: 80px;">
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            পরীক্ষার রোল নম্বর যা ছিল
+                        </span>
+                    </label>
+                    <div>
+                        <input type="number"  placeholder="xxx-xxxx-xx"  id="rollNumber">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>
+                        <span class="ui large text">
+                            পরীক্ষার নিবন্ধনী নম্বর যা ছিল
+                        </span>
+                    </label>
+                    <div id="regNumber">
+                        <input type="number" placeholder="xxx-xxxx-xx">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui left aligned container">
+    <button class="ui black button" style="margin-right: 615px">কাজ শেষ</button>
+    <button class="ui disabled button" style="display: inline" id="disable">খুঁজে দেখি </button>
+    <a th:href="@{/registration}">
+        <button class="ui positive button" style="display: none" id="enable">খুঁজে দেখি </button>
+    </a>
+    <div style="padding-bottom: 20px; padding-top: 20px;">
+        <i class="circle icon"></i>
+        <span>
+           আল-হায়াতুল উলিয়া ব্যতীত অন্য কোনো প্রতিষ্ঠান থেকে দাওরায়ে হাদীস পরীক্ষায় পাশ করা ছাত্র / ছাত্রী এই মাদ্রাসার মাধ্যমে নিবন্ধন করতে চাইলে <a>এখানে চাপুন </a>
+        </span>
+    </div>
+</div>
+<div class="ui basic segment"></div>
+<script>
+    $("#rollNumber").on("keyup", function () {
+        $('#disable').css("display", "none");
+        $('#enable').css("display", "inline");
+    });
+</script>
+</body>
+</html>
