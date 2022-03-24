@@ -6,41 +6,26 @@
     <title id="pageTitle">Registration Window</title>
 </head>
 <body layout:fragment="content">
-<div style="padding-bottom: 20px">
+<div style="padding-bottom: 20px;">
     <div class="ui basic segment"></div>
-    <div class="ui left aligned container" style="padding-bottom: 20px; padding-top: 50px">
+    <div class="ui left aligned container" style="padding-bottom: 20px; padding-top: 50px;">
         <div style="padding-bottom: 5px">
             <span class="ui big text"><b>দাওয়ারে হাদীস ১৪৪৫ - ছাত্র নিবন্ধনী</b></span>
         </div>
         <span class="ui large text">আল-হায়াতুল উলিয়া ব্যতীত অন্য কোনো প্রতিষ্ঠান থেকে দাওরায় হাদীস পরীক্ষায় পাশ করে থাকলে </span>
     </div>
-    <div class="ui tiny raised card" style="width: 800px;">
+    <div class="ui tiny raised card" style="width: 650px; background-color: #f0f4f4">
         <div style="margin-top: 40px; margin-bottom: 20px; margin-left: 50px">
             <div class="ui left aligned grid">
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">নাম </span></label>
-                    <div class="ui large input">
+                    <label><span class="ui medium header" style="margin-right: 100px">নাম </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
                         <input type="text" placeholder="প্রদান করুন" >
                     </div>
                 </div>
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">পিতার নাম </span></label>
-                    <div class="ui large input">
-                        <input type="text" placeholder="প্রদান করুন" >
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui left aligned grid">
-                <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">মোবাইল নম্বর  </span></label>
-                    <div class="ui large input">
-                        <input type="text" placeholder="প্রদান করুন" >
-                    </div>
-                </div>
-                <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">ইমেইল এড্রেস (অপশনাল) </span></label>
-                    <div class="ui large input">
+                    <label><span class="ui medium header" style="margin-right: 100px">পিতার নাম </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
                         <input type="text" placeholder="প্রদান করুন" >
                     </div>
                 </div>
@@ -48,77 +33,97 @@
 
             <div class="ui left aligned grid">
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px"> শেষ যে পরীক্ষায় অংশগ্রহণ করেছেন </span></label>
-                    <select id="lastExam">
+                    <label><span class="ui medium header" style="margin-right: 100px">মোবাইল নম্বর  </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
+                        <input type="text" placeholder="প্রদান করুন" >
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <label><span class="ui medium header" style="margin-right: 100px">ইমেইল এড্রেস (অপশনাল) </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
+                        <input type="text" placeholder="প্রদান করুন" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui left aligned grid">
+                <div class="eight wide column" style="padding-right: 60px;">
+                    <label><span class="ui medium header" > শেষ যে পরীক্ষায় অংশগ্রহণ করেছেন </span></label>
+                    <select class="ui fluid selection dropdown">
                         <option value="">ফজিলত</option>
                     </select>
                 </div>
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 200px"> পরীক্ষার রোল নম্বর যা ছিল</span></label>
-                    <input type="text" placeholder="xxx-xxxx-xx" >
-                    <span class="ui red text"></span>
+                    <label><span class="ui medium header" style="margin-right: 100px"> পরীক্ষার রোল নম্বর যা ছিল</span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
+                        <input type="text" placeholder="xxx-xxxx-xx" >
+                    </div>
                 </div>
             </div>
 
-            <div class="ui left aligned grid">
-                <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">শেষ পরীক্ষায় পাশের বছর  </span></label>
-                    <select >
+            <div class="ui left aligned grid" >
+                <div class="eight wide column" style="padding-right: 60px;">
+                    <label><span class="ui medium header" style="margin-right: 50px">শেষ পরীক্ষায় পাশের বছর  </span></label>
+                    <select class="ui fluid selection dropdown">
                         <option value="">১৪৪৫</option>
                     </select>
                 </div>
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">যে মাদ্রাসার মাধ্যমে পরীক্ষাটি দিয়েছেন  </span></label>
-                    <input type="text" placeholder="প্রদান করুন" >
-                    <span class="ui red text"></span>
+                    <label><span class="ui medium header" style="margin-right: 50px">যে মাদ্রাসার মাধ্যমে পরীক্ষাটি দিয়েছেন  </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
+                        <input type="text" placeholder="প্রদান করুন" >
+                    </div>
                 </div>
             </div>
 
             <div class="ui left aligned grid">
-                <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">যে বোর্ডের মাধ্যমে পরীক্ষাটি দেয়াছিলেন </span></label>
-                    <select >
+                <div class="eight wide column" style="padding-right: 60px;">
+                    <label><span class="ui medium header" >যে বোর্ডের মাধ্যমে পরীক্ষাটি দেয়াছিলেন </span></label>
+                    <select  class="ui fluid selection dropdown">
                         <option value="">ঢাকা</option>
                     </select>
                 </div>
                 <div class="eight wide column">
                     <label><span class="ui medium header" style="margin-right: 400px">পরীক্ষায় পাশের সনদ - </span></label>
-                    <input type="text" placeholder="প্রদান করুন" >
-                    <button>আপলোড</button>
-                    <span class="ui red text"></span>
+                    <div class="ui action input">
+                        <input type="text" placeholder="প্রদান করুন">
+                        <button class="ui button">আপলোড</button>
+                    </div>
                 </div>
             </div>
 
             <div class="ui left aligned grid">
-                <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">পরিচয়পত্রের ধরণ </span></label>
-                    <select id="lastExamYear">
+                <div class="eight wide column" style="padding-right: 60px;">
+                    <label><span class="ui medium header" >পরিচয়পত্রের ধরণ </span></label>
+                    <select class="ui fluid selection dropdown">
                         <option value="">জাতীয় পরিচয়পত্রের ধরণ </option>
                     </select>
                 </div>
                 <div class="eight wide column">
                     <label><span class="ui medium header" style="margin-right: 400px">পরিচয় পত্রের স্ক্যান কপি </span></label>
-                    <input type="text" placeholder="প্রদান করুন" id="name_arabic">
-                    <button>আপলোড</button>
-                    <span class="ui red text"></span>
+                    <div class="ui action input">
+                        <input type="text" placeholder="প্রদান করুন">
+                        <button class="ui button">আপলোড</button>
+                    </div>
                 </div>
             </div>
 
             <div class="ui left aligned grid">
                 <div class="eight wide column">
-                    <label><span class="ui medium header" style="margin-right: 400px">পরিচয়পত্রের নম্বর </span></label>
-                    <input type="text" placeholder="xxx-xxxx-xx" id="name_eng">
-                    <span class="ui red text"></span>
+                    <label><span class="ui medium header" style="margin-right: 100px">পরিচয়পত্রের নম্বর </span></label>
+                    <div class="ui fluid input" style="padding-right: 50px">
+                        <input type="text" placeholder="xxx-xxxx-xx" >
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
     <div class="ui left aligned container">
-        <button class="ui black button" style="margin-right: 615px">কাজ শেষ</button>
-        <button class="ui disabled button" style="display: inline" id="disable">খুঁজে দেখি </button>
-        <a th:href="@{/registration}">
-            <button class="ui positive button" style="display: none" id="enable">খুঁজে দেখি </button>
+        <button class="ui black button" style="margin-right: 465px">কাজ শেষ</button>
+        <button class="ui disabled button" style="display: none" id="disable1">খুঁজে দেখি </button>
+        <a>
+            <button class="ui positive button" style="display: inline" id="enable1">খুঁজে দেখি </button>
         </a>
         <div style="padding-bottom: 20px; padding-top: 20px;">
             <i class="circle icon"></i>
