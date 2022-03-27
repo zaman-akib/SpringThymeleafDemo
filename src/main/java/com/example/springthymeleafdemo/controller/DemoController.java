@@ -92,4 +92,7 @@ public class DemoController {
 
     @GetMapping(value = "/other-madrasah-registration")
     public String otherMadrasahRegistration() { return "other-madrasah-registration"; }
+
+    @GetMapping(value = "/registration-details")
+    public String registrationDetails() { return "registration-details"; }
 }

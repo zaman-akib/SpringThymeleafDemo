@@ -1,10 +1,423 @@
 <!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/admin-layout}">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title id="pageTitle">Registration Window</title>
 </head>
-<body>
-
+<body layout:fragment="content">
+<div>
+    <div class="ui basic segment"></div>
+    <div class="ui grid" style="width: 1500px; margin-left: 240px">
+        <div class="right ten wide column">
+            <div class="ui left aligned container" style="padding-bottom: 10px;">
+                <div style="margin-bottom: 40px">
+                    <div class="ui breadcrumb" style="width: fit-content">
+                        <a class="section"><span class="ui large text">প্রথম পাতা</span></a>
+                        <i class="right arrow icon divider"></i>
+                        <a class="section"><span class="ui large text">দাওরায়ে হাদীস ১৪৪৫</span></a>
+                        <i class="right arrow icon divider"></i>
+                        <div class="active section"><span class="ui large text">নিবন্ধনী কার্যক্রম</span></div>
+                    </div>
+                    <button class="ui right aligned positive button" style="margin-left: 335px">+ নিবন্ধনী</button>
+                </div>
+                <div class="ui grid" style="margin-bottom: 20px">
+                    <div class="four wide column">
+                        <select class="ui fluid selection dropdown">
+                            <option value="">সকল আবেদনকারী</option>
+                            <option value="">নিয়মিত আবেদনকারী</option>
+                            <option value="">অনিয়মিত মানউন্নয়ন</option>
+                            <option value="">অনিয়মিত জোমেনি</option>
+                            <option value="">অনিয়মিত অন্যান্য-(রাসিব)</option>
+                            <option value="">অনিয়মিত অনান্য-(১৪৩৬ এর আগের)</option>
+                            <option value="">অনিয়মিত অনান্য-(বহিরাগত)</option>
+                        </select>
+                    </div>
+                    <div class="four wide column">
+                        <select class="ui fluid  selection dropdown">
+                            <option value="">সকল</option>
+                            <option value="">পেমেন্ট ডিউ যাদের</option>
+                            <option value="">ফিঙ্গারপ্রিন্ট নেয়া হয়নি</option>
+                            <option value="">সকল সাবমিটের উপযুক্ত</option>
+                            <option value="">সকল স্থগিত</option>
+                        </select>
+                    </div>
+                    <div class="three wide column">
+                        <select class="ui fluid  selection dropdown">
+                            <option value="">ছাত্র ছাত্রী</option>
+                            <option value="">শুধু ছাত্র</option>
+                            <option value="">শুধু ছাত্রী</option>
+                        </select>
+                    </div>
+                    <div class="three wide column">
+                        <div class="ui icon input">
+                            <input type="text" placeholder="নাম, মোবাইল নম্বর ... ">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow: auto; height: 500px; width: 870px; padding: 5px;">
+                    <div class="ui raised  fluid card" style="background-color: #f0f4f4; width: 850px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td style="width: 120px">
+                                    <img class="ui middle aligned tiny image" src="/images/img.png">
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr style="height: 30px;">
+                                            <td style="width: 600px"><span
+                                                    class="ui header"> মুহম্মদ হাবিবুর রহমান </span></td>
+                                            <td style="width: 300px"><span class="ui header">নিয়মিত ছাত্র </span></td>
+                                            <td class="right aligned" style="width: 300px">
+                                                যাচাই করণ
+                                                <i class="window close red icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>পিতা - সলিমুদ্দিন বাহার</td>
+                                            <td>ফজিলত ১৪৪৩ পাস</td>
+                                            <td class="right aligned">
+                                                আঙুলের চাপ
+                                                <i class="window close red icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মাতা - সুনতালা রোকেয়া বেগম</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui raised  fluid card" style="background-color: #f0f4f4; width: 850px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td style="width: 120px">
+                                    <img class="ui middle aligned tiny image" src="/images/img_1.png">
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr style="height: 30px;">
+                                            <td style="width: 600px"><span class="ui header">আশরাফুল হক মামুন </span>
+                                            </td>
+                                            <td style="width: 300px"><span class="ui header">নিয়মিত ছাত্র </span></td>
+                                            <td class="right aligned" style="width: 300px">
+                                                সাক্ষর যাচাই করণ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>পিতা - সলিমুদ্দিন বাহার</td>
+                                            <td>ফজিলত ১৪৪৩ পাস</td>
+                                            <td class="right aligned">
+                                                আঙুলের চাপ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মাতা - সুনতালা রোকেয়া বেগম</td>
+                                            <td></td>
+                                            <td class="right aligned">
+                                                সাবমিটের উপযুক্ত
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui raised  fluid card" style="background-color: #f0f4f4; width: 850px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td style="width: 120px">
+                                    <img class="ui middle aligned tiny image" src="/images/img_2.png">
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr style="height: 30px;">
+                                            <td style="width: 600px"><span class="ui header">আশরাফুল হক মামুন </span>
+                                            </td>
+                                            <td style="width: 300px"><span class="ui header">নিয়মিত ছাত্র </span></td>
+                                            <td class="right aligned" style="width: 300px">
+                                                সাক্ষর যাচাই করণ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>পিতা - সলিমুদ্দিন বাহার</td>
+                                            <td>ফজিলত ১৪৪৩ পাস</td>
+                                            <td class="right aligned">
+                                                আঙুলের চাপ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মাতা - সুনতালা রোকেয়া বেগম</td>
+                                            <td><span class="ui red text"><u> স্থগিত রাখা হয়েছে </u></span></td>
+                                            <td class="right aligned">
+                                                সাবমিটের উপযুক্ত
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui raised  fluid card" style="background-color: #f0f4f4; width: 850px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td style="width: 120px">
+                                    <img class="ui middle aligned tiny image" src="/images/img_3.png">
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr style="height: 30px;">
+                                            <td style="width: 600px"><span class="ui header">আশরাফুল হক মামুন </span>
+                                            </td>
+                                            <td style="width: 300px"><span class="ui header">নিয়মিত ছাত্র </span></td>
+                                            <td class="right aligned" style="width: 300px">
+                                                সাক্ষর যাচাই করণ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>পিতা - সলিমুদ্দিন বাহার</td>
+                                            <td>ফজিলত ১৪৪৩ পাস</td>
+                                            <td class="right aligned">
+                                                আঙুলের চাপ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মাতা - সুনতালা রোকেয়া বেগম</td>
+                                            <td></td>
+                                            <td class="right aligned">
+                                                সাবমিটের উপযুক্ত
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui raised  fluid card" style="background-color: #f0f4f4; width: 850px">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td style="width: 120px">
+                                    <img class="ui middle aligned tiny image" src="/images/img_3.png">
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr style="height: 30px;">
+                                            <td style="width: 600px"><span class="ui header">আশরাফুল হক মামুন </span>
+                                            </td>
+                                            <td style="width: 300px"><span class="ui header">নিয়মিত ছাত্র </span></td>
+                                            <td class="right aligned" style="width: 300px">
+                                                সাক্ষর যাচাই করণ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>পিতা - সলিমুদ্দিন বাহার</td>
+                                            <td>ফজিলত ১৪৪৩ পাস</td>
+                                            <td class="right aligned">
+                                                আঙুলের চাপ
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মাতা - সুনতালা রোকেয়া বেগম</td>
+                                            <td></td>
+                                            <td class="right aligned">
+                                                সাবমিটের উপযুক্ত
+                                                <i class="check circle green icon"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="ui thirteen wide column">
+                        <div class="ui pagination menu" style="margin-left: 5px; margin-top: 10px">
+                            <a class="active item">
+                                1
+                            </a>
+                            <div class="disabled item">
+                                2
+                            </div>
+                            <a class="item">
+                                3
+                            </a>
+                            <a class="item">
+                                4
+                            </a>
+                            <a class="item">
+                                5
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui three wide column">
+                        <div style="margin-left: 5px; margin-top: 10px">মোট: ১২/৩৩৫ জন</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="five wide column">
+            <div class="ui left aligned container" style="padding-bottom: 10px;">
+                <div class="ui raised fluid card" style="background-color: #f0f4f4">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td style="width: 170px; padding-top: 10px; padding-bottom: 10px">
+                                <img class="ui top aligned small image" src="/images/img_4.png">
+                            </td>
+                            <td style="padding-top: 10px; padding-bottom: 10px">
+                                <table>
+                                    <tr style="height: 30px;">
+                                        <td style="width: 300px"><span class="ui large header">মুহম্মদ হাবিবুর রহমান </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ui large text">পিতা - সলিমুদ্দিন বাহার</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ui large text">মাতা - সুনতালা রোকেয়া বেগম</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ui large text">মোবাইল: ০১৭৮৫৪ ৭৮৬ ৪৫৬</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ui large text">সাক্ষর</span><span class="ui large text" style="margin-left: 110px;">আঙুলের ছাপ</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui tiny images">
+                                                <img class="ui image" src="/images/img_5.png" style="width: 120px; height: 45px">
+                                                <img class="ui image" src="/images/img_6.png" style="margin-left: 30px;width: 100px; height: 45px">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="ui basic segment" style="background-color: #c0c4c4">
+                        <button class="ui black button">তথ্য এডিট</button>
+                        <button class="ui black button">আঙুলের চাপ গ্রহণ</button>
+                        <button class="ui black button" style="margin-left: 50px">স্থগিত রাখি</button>
+                    </div>
+                    <div class="ui grid">
+                        <div class="ten wide column">
+                            <div style="padding-bottom: 40px">
+                                <div style="margin-left: 20px">
+                                    <span class="ui large text">আবেদনের ধরণ</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui medium text">দাওরায়ে হাদীস - ১৪৪৫ - <b>নিয়মিত</b></span>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 40px">
+                                <div style="margin-left: 20px">
+                                    <span class="ui large text">বিগত পরীক্ষার তথ্য</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">পরীক্ষার নাম:</span><span> ফজিলত</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">পাশের সন (হিজরী):</span><span> ১৪৪২</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">রোল নাম্বার:</span><span> ৮৭৫৬৫৪৩</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">প্রার্প্ত বিভাগ:</span><span> মুমতাজ</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">মাদ্রাসা:</span><span> আয়েশা সিদ্দিকী রঃ, ৫ দক্ষিণ বাড্ডা, ঢাকা</span>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 20px">
+                                <div style="margin-left: 20px">
+                                    <span class="ui large text">বিস্তারিত</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">লিঙ্গ: </span><span> মহিলা</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">জাতীয় পরিচয় পত্রের নম্বর:</span><span> ৮৭৯ ৬৭৮ ৫৬৭ ৪৫৬৪</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">জন্ম তারিখ(ঈসায়ী):</span><span> ০১/০১/১৯৭৮</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">ইমেইল এড্রেস:</span><span> প্রদান করা হয়নি</span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">স্থায়ী ঠিকানা:</span><span> ৭৮৬ চকসূত্রাপুর, বগুড়া সদর, বগুড়া </span>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <span class="ui grey text">অন্তর্ভুক্তিকরন মাদ্রাসা: </span><span> ০০৭৮৬৫০ - আয়েশা সিদ্দিকী রঃ, ৫ দক্ষিণ বাড্ডা, ঢাকা  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="six wide column">
+                            <img class="ui image" src="/images/img_7.png" style="height:100px; width:100px; margin-left: 20px">
+                            <div style="margin-left: 35px">
+                                <span>
+                                    00987456423
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui basic segment"></div>
+</div>
 </body>
 </html>
