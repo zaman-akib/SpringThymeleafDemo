@@ -7,27 +7,49 @@
 <body>
 
 <nav th:fragment="navbar">
-    <div class="ui teal inverted secondary menu" style="padding: 5px;">
+    <div class="ui teal inverted secondary menu" style="padding-top: 5px; padding-left: 20px; padding-bottom: 5px">
         <div class="left menu" style="margin-left: 5px; margin-right: 2px;">
-            <a class="ui header active item">
-                <span class="ui text">পরীক্ষা</span>
-            </a>
-            <a class="ui header item">
-                পরীক্ষক
-            </a>
-            <a class="ui header item">
-                নিরীক্ষক
-            </a>
-            <a class="ui header item">
-                মাদ্রাসা
-            </a>
-            <a class="ui header item">
-                সেটিংস
-            </a>
+            <div class="ui grid">
+                <div class="two wide column" style="height: 60px">
+                    <img class="ui top aligned small image" src="/images/img_8.png" style="width: 60px; height: 60px">
+                </div>
+                <div class="fourteen wide left aligned column" style="height: 100px; margin-left: -60px">
+                    <div class="ui grid">
+                        <div class="sixteen wide column" style="height: 30px">
+                            <span class="ui large header item" style="height: 10px">দারুল উলুম দক্ষিণ বাড্ডা জামিয়া মাদ্রাসা</span>
+                        </div>
+                        <div class="two wide column" style="height: 30px">
+                            <a class="ui header active item">
+                                পরীক্ষা
+                            </a>
+                        </div>
+                        <div class="two wide column" style="height: 30px">
+                            <a class="ui header item">
+                                পরীক্ষক
+                            </a>
+                        </div>
+                        <div class="two wide column" style="height: 30px">
+                            <a class="ui header item">
+                                নিরীক্ষক
+                            </a>
+                        </div>
+                        <div class="two wide column" style="height: 30px">
+                            <a class="ui header item">
+                                মাদ্রাসা
+                            </a>
+                        </div>
+                        <div class="two wide column" style="height: 30px">
+                            <a class="ui header item">
+                                সেটিংস
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div th:if="true" class="right menu">
+        <div th:if="true" class="right menu" >
             <div class="ui item">
-                <div class="ui right aligned container">
+                <div class="ui right aligned container" style="width: 500px; ">
                     <div>
                         <span class="ui large text">আবু বকর সিদ্দিকী</span>
                     </div>
@@ -44,6 +66,5 @@
         </div>
     </div>
 </nav>
-
 </body>
 </html>
